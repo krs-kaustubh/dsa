@@ -6,11 +6,11 @@
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
-        int sum = 0, i = 0, j = 0;
+        int sum = 0, i = 0, j = 0, size = nums.size();
         vector<int> pair = {};
         
-        for (i = 0; i < nums.size(); i++) {
-            for (j = i + 1; j < nums.size(); j++) {
+        for (i = 0; i < size; i++) {
+            for (j = i + 1; j < size; j++) {
                 sum = nums[i] + nums[j];
 
                 if (sum == target) {
