@@ -24,7 +24,8 @@ public:
         ListNode(int x, ListNode *next) : val(x), next(next) {}
     };
 
-/*    ListNode* deleteDuplicates(ListNode* head) {
+/*  solving using one pointer
+    ListNode* deleteDuplicates(ListNode* head) {
         ListNode* current = head;
 
         while (current != nullptr && current->next != nullptr) {
@@ -39,6 +40,7 @@ public:
         return head;
     }
 */
+    // solving using two pointers
     ListNode* deleteDuplicates(ListNode* head) {
 
         if (head == nullptr) {
