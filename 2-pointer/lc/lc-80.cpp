@@ -5,7 +5,7 @@
 
 class Solution {
 public:
-    // This problem is similar to LeetCode 23, but here we have to print the unique elements at most twice if present 
+    // This problem is similar to LeetCode 26, but here we have to print the unique elements at most twice if present
     int removeDuplicates(vector<int>& nums) {
     
         if (nums.size() == 0) {
