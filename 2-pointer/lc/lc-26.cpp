@@ -1,5 +1,7 @@
 // LeetCode 26: remove-duplicates-from-sorted-array
 // https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+// Time Complexity: O(N)
+// Space Complexity: O(1)
 #include "../../using.h"
 
 class Solution {
@@ -67,3 +69,16 @@ public:
 */
 
 };
+
+/*
+Complexity Calculation:
+- Time Complexity: O(N)
+  - The read pointer j traverses the array from index 1 to N-1 exactly once.
+  - In each iteration, pointer comparisons and assignments run in O(1).
+  - Total Time = O(N).
+
+- Space Complexity: O(1)
+  - In-place modification of nums vector.
+  - Uses only scalar pointers/counters (i, j, u, n).
+  - No auxiliary data structures -> Auxiliary Space = O(1).
+*/

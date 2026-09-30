@@ -1,5 +1,7 @@
 // LeetCode 977: Squares of a Sorted Array
 // https://leetcode.com/problems/squares-of-a-sorted-array/
+// Time Complexity: O(N)
+// Space Complexity: O(1) auxiliary (O(N) for output vector)
 #include "../../using.h"
 
 // method-1: Mine
@@ -120,3 +122,20 @@ int main() {
 
     return 0;
 }
+
+/*
+Complexity Calculation:
+- Time Complexity: O(N)
+  - Method 1 (Inside-Out):
+    - Linear scan to find partition index: O(N).
+    - Merge pass with p1 and p2: each pointer moves at most N steps, total O(N).
+  - Method 2 (Outside-In):
+    - Two pointers p1 and p2 converge from ends: exactly N comparisons -> O(N).
+    - std::reverse takes O(N).
+    - Total Time = O(N) for both methods.
+
+- Space Complexity: O(1) auxiliary
+  - Both methods operate using only scalar pointer variables (p1, p2, i).
+  - ans vector takes O(N) space, which is required to store the returned output.
+  - Auxiliary Space = O(1).
+*/

@@ -1,6 +1,9 @@
 // LeetCode 83: Remove Duplicates (linked list)
 // https://leetcode.com/problems/remove-duplicates-from-sorted-list/
 // in LeetCode we don't free memory of the nodes, so we don't need to free memory in this implementation
+// Time Complexity: O(N)
+// Space Complexity: O(1)
+#include "../../using.h"
 
 /**
  * Definition for singly-linked list.
@@ -64,3 +67,16 @@ public:
         return head;
     }
 };
+
+/*
+Complexity Calculation:
+- Time Complexity: O(N)
+  - nextNode pointer visits every node in the singly-linked list from head to tail exactly once.
+  - Node comparison and pointer rewiring (current->next = nextNode->next) operate in O(1) time.
+  - Total Time = O(N), where N is number of nodes in list.
+
+- Space Complexity: O(1)
+  - Modifies the existing linked list pointers in-place.
+  - Only uses two pointer references (current, nextNode).
+  - No new nodes allocated -> Auxiliary Space = O(1).
+*/

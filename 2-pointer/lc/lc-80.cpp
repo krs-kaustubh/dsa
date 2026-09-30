@@ -1,6 +1,8 @@
 // LeetCode 80: Remove Duplicates from Sorted Array II
 // https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/
 // helped by AI
+// Time Complexity: O(N)
+// Space Complexity: O(1)
 #include "../../using.h"
 
 class Solution {
@@ -37,3 +39,16 @@ public:
         return i + 1;
     }
 };
+
+/*
+Complexity Calculation:
+- Time Complexity: O(N)
+  - Fast pointer j scans the array once from index 1 to N-1 (N iterations).
+  - Each step does constant time checks, conditional writes, and pointer increments.
+  - Total Time = O(N).
+
+- Space Complexity: O(1)
+  - Elements rearranged in-place within input vector nums.
+  - Uses only scalar variables (i, j, u, n).
+  - No additional memory allocation -> Auxiliary Space = O(1).
+*/
